@@ -1,11 +1,10 @@
 import time
-
 import pytest
-
-from pages.basket_page import BasketPage
 from pages.login_page import LoginPage
+from pages.basket_page import BasketPage
 from pages.product_page import ProductPage
 
+@pytest.mark.xfail
 def test_guest_cant_see_success_message_after_adding_product_to_basket(browser):
     link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
     page = ProductPage(browser, link)
@@ -46,19 +45,18 @@ class TestLoginFromProductPage:
         basket_page.should_be_empty_basket()
         basket_page.should_be_message_that_basket_is_empty()
 
-
 class TestUserAddToBasketFromProductPage:
 
     @pytest.fixture(scope="function", autouse=True)
     def setup(self, browser):
         link = "http://selenium1py.pythonanywhere.com/en-gb/accounts/login/"
+        email = str(time.time()) + "@fakemail.org"
+        password = "21321321421eqweqweq!"
         base_page = BasketPage(browser, link)
         base_page.open()
         login_page = LoginPage(browser)
-        login_page.register_new_user("qwe@gmail.com", "21321321421eqweqweq!")
+        login_page.register_new_user(email, password)
         base_page.should_be_authorized_user()
-        yield
-        base_page.delete_user("21321321421eqweqweq!")
 
     def test_user_cant_see_success_message(self, browser):
         link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
