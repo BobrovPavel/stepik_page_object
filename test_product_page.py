@@ -35,18 +35,37 @@ class TestLoginFromProductPage:
         product_page = ProductPage(browser)
         product_page.should_be_login_link()
 
+    @pytest.mark.need_review
     def test_guest_can_go_to_login_page_from_product_page(self, browser):
         product_page = ProductPage(browser)
         login_page = LoginPage(browser)
         product_page.go_to_login_page()
         login_page.should_be_login_page()
 
+    @pytest.mark.need_review
     def test_guest_cant_see_product_in_basket_opened_from_product_page(self, browser):
         product_page = ProductPage(browser)
         product_page.go_to_basekt_page()
         basket_page = BasketPage(browser)
         basket_page.should_be_empty_basket()
         basket_page.should_be_message_that_basket_is_empty()
+
+
+class TestGuesAddToBasketFromProductPage:
+
+    def test_guest_cant_see_success_message(self, browser):
+        link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
+        page = ProductPage(browser, link)
+        page.open()
+        page.should_not_be_success_message()
+
+    @pytest.mark.need_review
+    def test_guest_can_add_product_to_basket(self, browser):
+        link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
+        page = ProductPage(browser, link)
+        page.open()
+        page.add_item_to_card()
+        page.item_should_be_added()
 
 
 class TestUserAddToBasketFromProductPage:
@@ -68,6 +87,7 @@ class TestUserAddToBasketFromProductPage:
         page.open()
         page.should_not_be_success_message()
 
+    @pytest.mark.need_review
     def test_user_can_add_product_to_basket(self, browser):
         link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
         page = ProductPage(browser, link)
