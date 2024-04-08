@@ -7,10 +7,17 @@ from selenium.webdriver.support.wait import WebDriverWait
 from pages.locators import BasePageLocators
 
 class BasePage:
-    def __init__(self, browser, url, timeout=1):
+    def __init__(self, browser, url="", timeout=1):
         self.browser = browser
         self.url = url
         self.browser.implicitly_wait(timeout)
+
+    def delete_user(self, password):
+        self.browser.find_element(*BasePageLocators.USER_ICON).click()
+        self.browser.find_element(*BasePageLocators.DELETE_PROFILE_BUTTON).click()
+        self.browser.find_element(*BasePageLocators.PASSWORD_INPUT).send_keys(password)
+        self.browser.find_element(*BasePageLocators.CONFIRM_DELETION_BUTTON).click()
+
 
     def element_is_disappeared(self, how, what, timeout=5):
         try:
@@ -60,3 +67,7 @@ class BasePage:
 
     def should_be_login_link(self):
         assert self.is_element_present(*BasePageLocators.LOGIN_LINK), "Login link is not presented"
+
+    def should_be_authorized_user(self):
+        assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \
+                                                                     " probably unauthorised user"

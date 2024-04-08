@@ -32,4 +32,3 @@ class ProductPage(BasePage):
 
     def success_message_should_disappear(self):
         assert self.element_is_disappeared(*ProductPageLocators.SUCCESS_TOAST), "Message isn't disappeared"
-
