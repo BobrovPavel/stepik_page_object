@@ -7,7 +7,7 @@ from selenium.webdriver.common.by import By
 
 def pytest_addoption(parser):
     parser.addoption('--browser_name', action='store', default='chrome', help='Choose browser (chrome of firefox')
-    parser.addoption("--language", action='store', default=None, help='Choose language')
+    parser.addoption("--language", action='store', default="ru", help='Choose language')
 
 @pytest.fixture(scope="function")
 def browser(request):
@@ -25,7 +25,6 @@ def browser(request):
         browser = webdriver.Firefox(options=options)
     else:
         raise pytest.UsageError("browser_name should be 'chrome' of 'firefox'")
-    browser.implicitly_wait(3)
     yield browser
     print("\nquit browser..")
     browser.quit()
