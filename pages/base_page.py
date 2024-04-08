@@ -1,5 +1,5 @@
 import math
-from pages.locators import BasePageLocators
+from .locators import BasePageLocators
 from selenium.common import NoSuchElementException
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
