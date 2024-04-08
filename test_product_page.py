@@ -4,6 +4,7 @@ from pages.login_page import LoginPage
 from pages.basket_page import BasketPage
 from pages.product_page import ProductPage
 
+
 @pytest.mark.xfail
 def test_guest_cant_see_success_message_after_adding_product_to_basket(browser):
     link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
@@ -12,6 +13,7 @@ def test_guest_cant_see_success_message_after_adding_product_to_basket(browser):
     page.add_item_to_card()
     page.should_not_be_success_message()
 
+
 @pytest.mark.xfail
 def test_message_disappeared_after_adding_product_to_basket(browser):
     link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
@@ -19,6 +21,7 @@ def test_message_disappeared_after_adding_product_to_basket(browser):
     page.open()
     page.add_item_to_card()
     page.success_message_should_disappear()
+
 
 @pytest.mark.login
 class TestLoginFromProductPage:
@@ -44,6 +47,7 @@ class TestLoginFromProductPage:
         basket_page = BasketPage(browser)
         basket_page.should_be_empty_basket()
         basket_page.should_be_message_that_basket_is_empty()
+
 
 class TestUserAddToBasketFromProductPage:
 

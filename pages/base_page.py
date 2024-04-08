@@ -1,10 +1,10 @@
-from selenium.common import NoSuchElementException
 import math
-from selenium.common.exceptions import NoAlertPresentException, TimeoutException
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.wait import WebDriverWait
-
 from pages.locators import BasePageLocators
+from selenium.common import NoSuchElementException
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import NoAlertPresentException, TimeoutException
+
 
 class BasePage:
     def __init__(self, browser, url="", timeout=1):
@@ -17,7 +17,6 @@ class BasePage:
         self.browser.find_element(*BasePageLocators.DELETE_PROFILE_BUTTON).click()
         self.browser.find_element(*BasePageLocators.PASSWORD_INPUT).send_keys(password)
         self.browser.find_element(*BasePageLocators.CONFIRM_DELETION_BUTTON).click()
-
 
     def element_is_disappeared(self, how, what, timeout=5):
         try:
