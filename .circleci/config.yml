@@ -1,8 +1,10 @@
-version: 2
+version: 2.1
+orbs:
+  win: circleci/windows@5.0
 jobs:
   build:
-    machine:
-      image: windows-default
+    executor:
+      name: win/default
     docker:
       - image: cimg/python:3.11.0
       - image: selenium/standalone-chrome:3.11.0
