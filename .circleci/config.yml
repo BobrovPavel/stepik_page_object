@@ -12,7 +12,6 @@ jobs:
       - checkout
       - browser-tools/install-browser-tools:
           chrome-version: 85.0.4183.102
-          firefox-version: 80.0.1
       - run:
           name: Download Selenium Server
           command: choco install -y selenium
