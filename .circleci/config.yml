@@ -9,17 +9,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install ChromeDriver
-          command: |
-            $chrmVer = (Get-WmiObject Win32_Product | Where-Object { $_.Name -match "Google Chrome" }).Version
-            $majorVersion = $chrmVer.split(".")[0]
-            $url = "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$majorVersion"
-            Invoke-WebRequest -Uri $url -OutFile chromedriver_version.txt
-            $chromedriverVersion = Get-Content chromedriver_version.txt
-            Invoke-WebRequest "https://chromedriver.storage.googleapis.com/$chromedriverVersion/chromedriver_win32.zip" -OutFile chromedriver.zip
-            Expand-Archive chromedriver.zip -DestinationPath $env:USERPROFILE
-            $env:PATH += ";$env:USERPROFILE"
-      - run:
           name: Run Selenium Server
           command: |
             java -jar C:\tools\selenium\selenium-server-standalone.jar
