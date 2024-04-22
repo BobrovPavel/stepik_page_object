@@ -15,9 +15,6 @@ jobs:
             cd selenium
             choco install selenium
       - run:
-          name: back to project
-          command: cd ..
-      - run:
           name: check python
           command: python --version
       - run:
