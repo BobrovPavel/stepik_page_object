@@ -13,13 +13,16 @@ jobs:
           command: |
             ls
             mkdir selenium
-            cd selenium
+            cd .\selenium\
             choco install -y selenium
+      - run:
+          name: go into selenium package
+          command: cd selenium
       - run:
           name: Run Selenium Server
           command: |
             ls
-            java -jar selenium-server-standalone.jar
+            java -jar selenium/selenium-server-standalone.jar
       - run:
           name: check files
           command: ls
