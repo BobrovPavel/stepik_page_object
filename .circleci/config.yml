@@ -15,6 +15,13 @@ jobs:
             cd selenium
             choco install -y selenium
       - run:
+          name: Run Selenium Server
+          command: java -jar selenium/selenium-server-standalone.jar
+          background: true
+      - run:
+          name: return to root
+          command: cd ..
+      - run:
           name: check python
           command: python --version
       - run:
