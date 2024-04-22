@@ -2,11 +2,14 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/python:3.11.0-stretch-node-browsers
+      - image: circleci/python:3.7.1-stretch-node-browsers
     working_directory: ~/repo
     steps:
       - checkout
-
+      - run:
+          name: upgrade pip
+          command: . venv/bin/activate
+          pip install --upgrade pip
       - run:
           name: install dependencies
           command: |
