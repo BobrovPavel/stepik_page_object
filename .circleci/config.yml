@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: upgrade pip
-          command: .venv/bin/activate
+          command: . venv/bin/activate
           pip install --upgrade pip
       - run:
           name: install dependencies
