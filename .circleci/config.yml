@@ -17,7 +17,9 @@ jobs:
             choco install -y selenium
       - run:
           name: Run Selenium Server
-          command: java -jar selenium-server-standalone.jar
+          command: |
+            ls
+            java -jar selenium-server-standalone.jar
       - run:
           name: check files
           command: ls
