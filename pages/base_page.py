@@ -1,10 +1,8 @@
 import math
-from .locators import BasePageLocators
-from selenium.common import NoSuchElementException
+from pages.locators import BasePageLocators
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import NoAlertPresentException, TimeoutException
-
+from selenium.common.exceptions import NoAlertPresentException, TimeoutException, NoSuchElementException
 
 class BasePage:
     def __init__(self, browser, url="", timeout=1):

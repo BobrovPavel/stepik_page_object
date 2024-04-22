@@ -1,9 +1,10 @@
 import os
 import time
 import pytest
-from .pages.basket_page import BasketPage
-from .pages.login_page import LoginPage
-from .pages.product_page import ProductPage
+
+from pages.basket_page import BasketPage
+from pages.login_page import LoginPage
+from pages.product_page import ProductPage
 
 
 @pytest.mark.xfail
