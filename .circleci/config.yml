@@ -13,7 +13,7 @@ jobs:
           command: |
             mkdir selenium
             cd selenium
-            choco install selenium
+            choco install -y selenium
       - run:
           name: check python
           command: python --version
