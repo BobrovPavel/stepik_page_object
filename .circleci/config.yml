@@ -12,12 +12,7 @@ jobs:
           name: Download Selenium Server
           command: |
             ls
-            mkdir selenium
-            cd .\selenium\
             choco install -y selenium
-      - run:
-          name: go into selenium package
-          command: cd selenium
       - run:
           name: Run Selenium Server
           command: |
