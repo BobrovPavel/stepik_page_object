@@ -14,7 +14,7 @@ jobs:
           command: . venv/bin/activate
       - run:
           name: upgrade pip
-          command: pip install --upgrade pip
+          command: pip install --upgrade pip --user
       - run:
           name: install dependencies
           command: |
