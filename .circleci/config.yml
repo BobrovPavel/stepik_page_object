@@ -10,6 +10,17 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
+      - browser-tools/install-browser-tools:
+          chrome-version: 85.0.4183.102
+          firefox-version: 80.0.1
+      - run:
+          name: Check install
+          command: |
+            google-chrome --version
+            firefox --version
+            geckodriver --version
+            chromedriver --version
+            java -jar /usr/local/bin/selenium.jar --version
       - run:
           name: Download Selenium Server
           command: choco install -y selenium
