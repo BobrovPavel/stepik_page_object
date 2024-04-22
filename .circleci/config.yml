@@ -14,7 +14,7 @@ jobs:
       - run:
           name: Run Selenium Server
           command: |
-            java -jar C:\tools\selenium\selenium-server-standalone.jar --selenium-manager true
+            java -jar C:\tools\selenium\selenium-server-standalone.jar
           background: true
       - run:
           name: check python
