@@ -16,15 +16,7 @@ def browser(request):
     if browser_name == 'chrome':
         options = Options()
         options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
-        # options.add_argument()
-        desired_capabilities = {
-            "browserName": "chrome",
-            "browserVersion": "latest",
-            "video": "True",
-            "platform": "WIN10",
-            "platformName": "windows",
-        }
-        browser = webdriver.Remote(command_executor="http://localhost:4444/wd/hub", desired_capabilities={'browserName': 'chrome', 'javascriptEnabled': True})
+        browser = webdriver.Remote(command_executor="http://localhost:4444/wd/hub", )
     elif browser_name == 'firefox':
         options = OptionsFirefox()
         options.set_preference("intl.accept_languages", user_language)
