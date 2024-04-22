@@ -3,9 +3,8 @@ orbs:
   win: circleci/windows@5.0.0
 jobs:
   build:
-    executor:
-      name: win/default
-      size: "medium"
+    machine:
+      image: windows-default
     working_directory: ~/repo
     steps:
       - checkout
