@@ -1,6 +1,4 @@
 version: 2.1
-orbs:
-  browser-tools: circleci/browser-tools@1.4.8
 jobs:
   build:
     resource_class: 'windows.medium'
@@ -10,11 +8,17 @@ jobs:
     working_directory: ~/repo
     steps:
       - checkout
-      - browser-tools/install-chrome
-      - browser-tools/install-chromedriver
       - run:
-          name: Download Selenium Server
-          command: choco install -y selenium
+          name: Install ChromeDriver
+          command: |
+            $chrmVer = (Get-WmiObject Win32_Product | Where-Object { $_.Name -match "Google Chrome" }).Version
+            $majorVersion = $chrmVer.split(".")[0]
+            $url = "https://chromedriver.storage.googleapis.com/LATEST_RELEASE_$majorVersion"
+            Invoke-WebRequest -Uri $url -OutFile chromedriver_version.txt
+            $chromedriverVersion = Get-Content chromedriver_version.txt
+            Invoke-WebRequest "https://chromedriver.storage.googleapis.com/$chromedriverVersion/chromedriver_win32.zip" -OutFile chromedriver.zip
+            Expand-Archive chromedriver.zip -DestinationPath $env:USERPROFILE
+            $env:PATH += ";$env:USERPROFILE"
       - run:
           name: Run Selenium Server
           command: |
