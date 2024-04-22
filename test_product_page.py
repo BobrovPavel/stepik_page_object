@@ -36,7 +36,7 @@ class TestLoginFromProductPage:
 
         if not os.path.exists(screenshots_directory):
             os.makedirs(screenshots_directory)
-        browser.save_screenshot(f"{screenshots_directory}/screebshot.png")
+        browser.save_screenshot(f"{screenshots_directory}/{time.time()}.png")
 
 
 
