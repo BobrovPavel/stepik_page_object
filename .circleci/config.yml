@@ -11,7 +11,7 @@ jobs:
           command: python3 -m venv venv
       - run:
           name: activate venw
-          command: .venv/bin/activate
+          command: . venv/bin/activate
       - run:
           name: upgrade pip
           command: pip install --upgrade pip
