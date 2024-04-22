@@ -7,6 +7,9 @@ jobs:
     steps:
       - checkout
       - run:
+          name: upgrade pip
+          comand: pip install --upgrade pip
+      - run:
           name: install dependencies
           command: |
             python3 -m venv venv
