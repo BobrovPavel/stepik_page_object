@@ -19,7 +19,7 @@ jobs:
           command: .\venv\Scripts\activate
       - run:
           name: upgrade pip
-          command: pip install --upgrade pip --user
+          command: python -m pip install --upgrade pip
       - run:
           name: install dependencies
           command: |
