@@ -13,7 +13,7 @@ jobs:
          command: python --version
       - run:
           name: create venw
-          command: python3 -m venv venv
+          command: python -m venv venv
       - run:
           name: activate venw
           command: . venv/bin/activate
