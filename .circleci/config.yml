@@ -26,4 +26,4 @@ jobs:
             . venv/bin/activate
             pytest -rP -m need_review
       - store_artifacts:
-          path: tmp/screenshots
+          path: tmp/screenshots/
