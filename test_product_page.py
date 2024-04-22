@@ -31,7 +31,12 @@ class TestLoginFromProductPage:
         link = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-the-stars_95/"
         product_page = ProductPage(browser, link)
         product_page.open()
-        browser.save_screenshot(f"stepik/tmp/screenshots/{time.time()}.png")
+        current_directory = os.getcwd()
+        screenshots_directory = os.path.abspath(os.path.join(current_directory, 'tmp', 'screenshots'))
+
+        if not os.path.exists(screenshots_directory):
+            os.makedirs(screenshots_directory)
+        browser.save_screenshot(f"{screenshots_directory}/screebshot.png")
 
 
 
