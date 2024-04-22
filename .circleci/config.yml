@@ -17,7 +17,7 @@ jobs:
           name: Run Selenium Server
           command: |
             ls
-            java -jar selenium/selenium-server-standalone.jar
+            java -jar C:\tools\selenium\selenium-server-standalone.jar
       - run:
           name: check files
           command: ls
