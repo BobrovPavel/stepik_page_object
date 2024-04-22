@@ -1,3 +1,4 @@
+import os
 import time
 import pytest
 from .pages.basket_page import BasketPage
@@ -30,7 +31,9 @@ class TestLoginFromProductPage:
         link = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-the-stars_95/"
         product_page = ProductPage(browser, link)
         product_page.open()
-        browser.get_screenshot_as_file(f"tmp/screenshots/{time.time()}.png")
+        browser.save_screenshot(f"tmp/screenshots/{time.time()}.png")
+        browser.get_screenshot_as_png()
+
 
     def test_guest_should_see_login_link_on_product_page(self, browser):
         product_page = ProductPage(browser)
@@ -41,6 +44,8 @@ class TestLoginFromProductPage:
         print(f"Start test: 'test_guest_can_go_to_login_page_from_product_page'")
         product_page = ProductPage(browser)
         login_page = LoginPage(browser)
+        browser.save_screenshot(f"stepik/screenshots.png")
+        browser.get_screenshot_as_png()
         product_page.go_to_login_page()
         login_page.should_be_login_page()
 
