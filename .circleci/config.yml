@@ -1,4 +1,6 @@
-version: 2
+version: 2.1
+orbs:
+  browser-tools: circleci/browser-tools@x.y
 jobs:
   build:
     resource_class: 'windows.medium'
