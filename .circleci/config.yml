@@ -11,6 +11,7 @@ jobs:
       - run:
           name: Download Selenium Server
           command: |
+            ls
             mkdir selenium
             cd selenium
             choco install -y selenium
@@ -18,8 +19,14 @@ jobs:
           name: Run Selenium Server
           command: java -jar selenium-server-standalone.jar
       - run:
+          name: check files
+          command: ls
+      - run:
           name: return to root
           command: cd ..
+      - run:
+          name: check files
+          command: ls
       - run:
           name: check python
           command: python --version
@@ -42,3 +49,5 @@ jobs:
             pytest -rP -m need_review
       - store_artifacts:
           path: tmp/screenshots/
+      - store_artifacts:
+          path: C:\ProgramData\chocolatey\logs\chocolatey.log
