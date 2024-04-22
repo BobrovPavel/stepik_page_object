@@ -13,7 +13,7 @@ jobs:
           command: |
             mkdir selenium
             cd selenium
-            curl -O https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.19.0/selenium-server-4.19.1.jar
+            Invoke-WebRequest -Uri https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.19.0/selenium-server-4.19.1.jar
       - run:
           name: Run Selenium Server
           command: java -jar selenium/selenium-server-standalone-3.141.59.jar
