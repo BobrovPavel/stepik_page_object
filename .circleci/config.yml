@@ -9,8 +9,8 @@ jobs:
     steps:
       - checkout
       - run:
-          name: install python
-          command: choco install python3
+         name: check python
+         command: python --version
       - run:
           name: create venw
           command: python3 -m venv venv
