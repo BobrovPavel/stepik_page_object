@@ -30,6 +30,7 @@ class TestLoginFromProductPage:
         link = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-the-stars_95/"
         product_page = ProductPage(browser, link)
         product_page.open()
+        browser.get_screenshot_as_file(f"tmp/screenshots/{time.time()}.png")
 
     def test_guest_should_see_login_link_on_product_page(self, browser):
         product_page = ProductPage(browser)
