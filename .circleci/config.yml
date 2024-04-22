@@ -1,8 +1,10 @@
 version: 2
 jobs:
   build:
+    resource_class: 'windows.medium'
     machine:
-      image: windows-2019::medium
+      image: 'windows-server-2022-gui:current'
+      shell: 'powershell.exe -ExecutionPolicy Bypass'
     working_directory: ~/repo
     steps:
       - checkout
