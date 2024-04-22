@@ -13,10 +13,7 @@ jobs:
           command: |
             mkdir selenium
             cd selenium
-            choco install -y selenium-server-standalone
-      - run:
-          name: Run Selenium Server
-          command: java -jar selenium/selenium-server-standalone
+            choco install selenium
       - run:
           name: back to project
           command: cd ..
