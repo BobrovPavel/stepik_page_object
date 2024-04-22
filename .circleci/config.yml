@@ -10,23 +10,12 @@ jobs:
       - checkout
       - run:
           name: Download Selenium Server
-          command: |
-            ls
-            choco install -y selenium
+          command: choco install -y selenium
       - run:
           name: Run Selenium Server
           command: |
-            ls
             java -jar C:\tools\selenium\selenium-server-standalone.jar
-      - run:
-          name: check files
-          command: ls
-      - run:
-          name: return to root
-          command: cd ..
-      - run:
-          name: check files
-          command: ls
+            background: true
       - run:
           name: check python
           command: python --version
