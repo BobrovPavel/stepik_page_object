@@ -14,8 +14,9 @@ def browser(request):
     browser_name = request.config.getoption('browser_name')
 
     if browser_name == 'chrome':
-        options = webdriver.ChromeOptions()
-        browser = webdriver.Remote(options=options)
+        options = Options()
+        options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
+        browser = webdriver.Remote(command_executor="http://localhost:4444/wd/hub", options=options)
     elif browser_name == 'firefox':
         options = OptionsFirefox()
         options.set_preference("intl.accept_languages", user_language)
