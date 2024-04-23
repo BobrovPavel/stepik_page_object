@@ -9,9 +9,12 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Download Selenium Server
+          command: Invoke-WebRequest -Uri "https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.19.0/selenium-server-4.19.1.jar" -OutFile "selenium-server-standalone.jar"
+      - run:
           name: Run Selenium Server
           command: |
-            java -jar C:\tools\selenium\selenium-server-standalone.jar
+            java -jar C:\tools\selenium\selenium-server-standalone.jar standalone
           background: true
       - run:
           name: check python
