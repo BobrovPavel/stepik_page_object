@@ -1,45 +1,27 @@
-version: 2.1
+version: 2
 jobs:
   build:
-    resource_class: 'windows.medium'
-    machine:
-      image: 'windows-server-2022-gui:current'
-      shell: 'powershell.exe -ExecutionPolicy Bypass'
+    docker:
+      - image: cimg/python:3.11.0
+      - image: selenium/standalone-chrome:3.11.0
     working_directory: ~/repo
     steps:
       - checkout
       - run:
-          name: Download Selenium Server
-          command: | 
-            Invoke-WebRequest -Uri "https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.19.0/selenium-server-4.19.1.jar" -OutFile "selenium-server-standalone.jar"
-            ls
-      - run:
-          name: Run Selenium Server
-          command: |
-            ls
-            java -jar selenium-server-standalone.jar standalone --selenium-manager true
-          background: true
-      - run:
-          name: check python
-          command: python --version
-      - run:
           name: create venw
-          command: python -m venv venv
+          command: python3 -m venv venv
       - run:
           name: activate venw
-          command: .\venv\Scripts\activate
+          command: .venv/bin/activate
       - run:
           name: upgrade pip
-          command: python -m pip install --upgrade pip
+          command: pip install --upgrade pip --user
       - run:
           name: install dependencies
-          command: |
-            pip install -r requirements.txt
+          command: pip install -r requirements.txt
       - run:
           name: run tests
           command: |
             pytest -rP -m need_review
       - store_artifacts:
           path: tmp/screenshots/
-      - store_artifacts:
-          path: C:\ProgramData\chocolatey\logs\chocolatey.log
