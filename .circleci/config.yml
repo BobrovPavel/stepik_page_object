@@ -32,6 +32,11 @@ jobs:
             cd allure-2.29.0
             ls
       - run:
+          name: Check path 3
+          command: |
+            cd allure-2.29.0
+            ls
+      - run:
           name: Add allure to sys path
           command: |
             $existingPath = [System.Environment]::GetEnvironmentVariable("Path", "Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path", "User")
