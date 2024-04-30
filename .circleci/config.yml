@@ -24,14 +24,10 @@ jobs:
             Get-Location
             cd allure-2.29.0
             ls
-            cd allure-2.29.0
-            ls
       - run:
           name: Add allure to sys path
           command: |
-            $env:Path += ";C:\Users\circleci\repo\allure-2.29.0\allure-2.29.0\bin"
-            ls
-            Get-Location
+            $env:Path += ";C:\Users\circleci\repo\allure-2.29.0\bin"
       - run:
           name: Run Selenium Server
           command: |
