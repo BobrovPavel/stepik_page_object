@@ -28,6 +28,9 @@ jobs:
             ls
             cd allure-2.29.0
             ls
+            cd bin
+            ls
+            Get-Location
       - run:
           name: Add allure to sys path
           command: |
