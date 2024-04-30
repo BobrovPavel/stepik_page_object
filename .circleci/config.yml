@@ -11,6 +11,7 @@ jobs:
       - run:
           name: Download Selenium Server
           command: | 
+            echo $env:path
             Invoke-WebRequest -Uri "https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.19.0/selenium-server-4.19.1.jar" -OutFile "selenium-server-standalone.jar"
 #      - run:
 #          name: Download allure
