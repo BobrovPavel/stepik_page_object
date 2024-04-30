@@ -34,13 +34,15 @@ jobs:
       - run:
           name: Add allure to sys path
           command: |
+            $existingPath = [System.Environment]::GetEnvironmentVariable("Path", "Machine")
+            $newPath = $existingPath + ";C:\Users\circleci\repo\allure-2.29.0\allure-2.29.0\bin"
+            [System.Environment]::SetEnvironmentVariable("Path", $newPath, "Machine")
             $env:PATH += ";C:\Users\circleci\repo\allure-2.29.0\allure-2.29.0\bin"
             echo $env:path
-            $CurrentPATH = ([Environment]::GetEnvironmentVariable("PATH")).Split(";")
-            $NewPATH = ($CurrentPATH + "C:\Users\circleci\repo\allure-2.29.0\allure-2.29.0\bin") -Join ";"
-            [Environment]::SetEnvironmentVariable("PATH", $NewPath, [EnvironmentVariableTarget]::Machine)  
+            $existingPath = [System.Environment]::GetEnvironmentVariable("Path", "User")
+            $newPath = $existingPath + ";C:\Users\circleci\repo\allure-2.29.0\allure-2.29.0\bin"
+            [System.Environment]::SetEnvironmentVariable("Path", $newPath, "User")
             echo $env:path
-
 
       - run:
           name: Run Selenium Server
