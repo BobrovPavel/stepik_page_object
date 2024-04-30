@@ -66,6 +66,7 @@ jobs:
       - run:
           name: run tests
           command: |
+            echo $env:path
             pytest -rP -m need_review
       - store_artifacts:
           path: tmp/screenshots/
