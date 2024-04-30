@@ -22,23 +22,11 @@ jobs:
             Expand-Archive allure-2.29.0.zip -DestinationPath C:\Users\circleci\repo\allure-2.29.0
             Get-Location
       - run:
-          name: Check path
-          command: |
-            cd allure-2.29.0
-            ls
-            cd allure-2.29.0
-            ls
-            cd bin
-            ls
-            Get-Location
-      - run:
           name: Add allure to sys path
           command: |
-            $existingPath = [System.Environment]::GetEnvironmentVariable("Path", "User")
-            $newPath = $existingPath + ";C:\Users\circleci\repo\allure-2.29.0\allure-2.29.0\bin"
-            [Environment]::SetEnvironmentVariable( 'Path', $newPath, [EnvironmentVariableTarget]::Machine )
+            $newPath = "$env:PATH;C:\Users\circleci\repo\allure-2.29.0\allure-2.29.0\bin"
+            [System.Environment]::SetEnvironmentVariable("PATH", $newPath, [System.EnvironmentVariableTarget]::Machine)
             echo $env:path
-
       - run:
           name: Run Selenium Server
           command: |
