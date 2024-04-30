@@ -19,7 +19,7 @@ jobs:
       - run:
           name: Unpack allure
           command: |
-            Expand-Archive "allure-2.29.0.zip"
+            Expand-Archive allure-2.29.0.zip -DestinationPath C:\Users\circleci\repo\allure-2.29.0
             Get-Location
       - run:
           name: Check path
