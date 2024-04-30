@@ -1,3 +1,16 @@
+version: 2
+jobs:
+  build:
+    resource_class: 'windows.medium'
+    machine:
+      image: 'windows-server-2022-gui:current'
+      shell: 'powershell.exe -ExecutionPolicy Bypass'
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run:
+          name: Download Selenium Server
+          command: choco install -y selenium
       - run:
           name: Run Selenium Server
           command: |
