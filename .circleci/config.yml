@@ -39,7 +39,7 @@ jobs:
             [System.Environment]::SetEnvironmentVariable("Path", $newPath, "Machine")
             echo $env:path
             $existingPath = [System.Environment]::GetEnvironmentVariable("Path", "User")
-            $newPath = $existingPath + ";C:\Users\raind\Downloads\allure-2.29.0\allure-2.29.0\bin"
+            $newPath = $existingPath + ";C:\Users\circleci\repo\allure-2.29.0\allure-2.29.0\bin"
             [System.Environment]::SetEnvironmentVariable("Path", $newPath, "User")
             echo $env:path
       - run:
