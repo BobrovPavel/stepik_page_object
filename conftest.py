@@ -14,17 +14,8 @@ def browser(request):
     browser_name = request.config.getoption('browser_name')
 
     if browser_name == 'chrome':
-        options = Options()
-        desired_capabilities = {
-            "browserName": "chrome",
-            "browserVersion": "latest",
-            "video": "True",
-            "platform": "WIN10",
-            "platformName": "windows",
-        }
-        options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
-        options.add_argument("browserName: chrome")
-        browser = webdriver.Remote(options=options, desired_capabilities=desired_capabilities)
+        options = webdriver.ChromeOptions()
+        browser = webdriver.Remote(options=options)
     elif browser_name == 'firefox':
         options = OptionsFirefox()
         options.set_preference("intl.accept_languages", user_language)
