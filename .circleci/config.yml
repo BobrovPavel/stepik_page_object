@@ -26,14 +26,6 @@ jobs:
           command: |
             cd allure-2.29.0
             ls
-      - run:
-          name: Check path 2
-          command: |
-            cd allure-2.29.0
-            ls
-      - run:
-          name: Check path 3
-          command: |
             cd allure-2.29.0
             ls
       - run:
