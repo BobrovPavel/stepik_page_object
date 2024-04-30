@@ -12,11 +12,19 @@ jobs:
           name: Download Selenium Server
           command: | 
             Invoke-WebRequest -Uri "https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.19.0/selenium-server-4.19.1.jar" -OutFile "selenium-server-standalone.jar"
+      - run:
+          name: Download allure
+          command: |
+            Invoke-WebRequest -Uri "https://github.com/allure-framework/allure2/archive/refs/tags/2.29.0.zip" -OutFile "allure-2.29.0.zip"
+      - run:
+          name: Unpack allure
+          command: |
+            Expand-Archive "allure-2.29.0.zip"
             ls
+            Get-Location
       - run:
           name: Run Selenium Server
           command: |
-            ls
             java -jar selenium-server-standalone.jar standalone --selenium-manager true
           background: true
       - run:
