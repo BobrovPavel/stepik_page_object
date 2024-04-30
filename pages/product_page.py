@@ -1,3 +1,4 @@
+from config.links import Links
 from pages.base_page import BasePage
 from pages.locators import ProductPageLocators
 from selenium.webdriver.support.wait import WebDriverWait
@@ -5,6 +6,8 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 class ProductPage(BasePage):
+
+    PAGE_URL = Links.PRODUCT_PAGE
 
     def add_item_to_card(self):
         self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET_BTN).click()

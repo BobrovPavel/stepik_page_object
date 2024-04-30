@@ -1,14 +1,26 @@
 import math
+import allure
+from allure_commons.types import AttachmentType
+
+from config.links import Links
 from pages.locators import BasePageLocators
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import NoAlertPresentException, TimeoutException, NoSuchElementException
 
 class BasePage:
-    def __init__(self, browser, url="", timeout=1):
+    def __init__(self, browser):
         self.browser = browser
-        self.url = url
-        self.browser.implicitly_wait(timeout)
+        self.browser.implicitly_wait(1.0)
+
+    PAGE_URL = Links.HOST
+
+    def open(self, link=""):
+        with allure.step(f"Open '{self.PAGE_URL}' page"):
+            self.browser.get(self.PAGE_URL)
+
+    def make_screenshot(self, screenshot_name):
+        allure.attach(body=self.browser.get_screenshot_as_png(), name=screenshot_name, attachment_type=AttachmentType.PNG)
 
     def delete_user(self, password):
         self.browser.find_element(*BasePageLocators.USER_ICON).click()
@@ -44,9 +56,6 @@ class BasePage:
         except TimeoutException:
             return True
         return False
-
-    def open(self):
-        self.browser.get(self.url)
 
     def solve_quiz_and_get_code(self):
         alert = self.browser.switch_to.alert
