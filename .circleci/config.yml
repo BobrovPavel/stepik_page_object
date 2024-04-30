@@ -4,39 +4,29 @@ jobs:
     resource_class: 'windows.medium'
     machine:
       image: 'windows-server-2022-gui:current'
-      shell: 'powershell.exe -ExecutionPolicy RemoteSigned'
+      shell: 'powershell.exe -ExecutionPolicy Bypass'
     working_directory: ~/repo
     steps:
       - checkout
       - run:
           name: Download Selenium Server
           command: | 
-            echo $env:path
             Invoke-WebRequest -Uri "https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.19.0/selenium-server-4.19.1.jar" -OutFile "selenium-server-standalone.jar"
-#      - run:
-#          name: Download allure
-#          command: |
-#            Invoke-WebRequest -Uri "https://github.com/allure-framework/allure2/releases/download/2.29.0/allure-2.29.0.zip" -OutFile "allure-2.29.0.zip"
       - run:
-          name: Install Scoop
+          name: Download allure
           command: |
-            Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-            Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
+            Invoke-WebRequest -Uri "https://github.com/allure-framework/allure2/releases/download/2.29.0/allure-2.29.0.zip" -OutFile "allure-2.29.0.zip"
       - run:
-          name: Install allure
+          name: Unpack allure
           command: |
-            scoop install allure
-#      - run:
-#          name: Unpack allure
-#          command: |
-#            Expand-Archive allure-2.29.0.zip -DestinationPath C:\Users\circleci\repo\allure-2.29.0
-#            Get-Location
-#      - run:
-#          name: Add allure to sys path
-#          command: |
-#            $newPath = "$env:PATH;C:\Users\circleci\repo\allure-2.29.0\allure-2.29.0\bin"
-#            [System.Environment]::SetEnvironmentVariable("PATH", $newPath, [System.EnvironmentVariableTarget]::Machine)
-#            echo $env:path
+            Expand-Archive allure-2.29.0.zip -DestinationPath C:\Users\circleci\repo\allure-2.29.0
+            Get-Location
+      - run:
+          name: Add allure to sys path
+          command: |
+            $newPath = "$env:PATH;C:\Users\circleci\repo\allure-2.29.0\allure-2.29.0\bin"
+            [System.Environment]::SetEnvironmentVariable("PATH", $newPath, [System.EnvironmentVariableTarget]::Machine)
+            echo $env:path
       - run:
           name: Run Selenium Server
           command: |
