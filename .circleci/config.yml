@@ -32,11 +32,11 @@ jobs:
           name: Add allure to sys path
           command: |
             $existingPath = [System.Environment]::GetEnvironmentVariable("Path", "Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path", "User")
-            $newPath = $existingPath + ";C:\Users\circleci\repo\\allure-2.29.0\allure2-2.29.0.0\bin"
+            $newPath = $existingPath + ";C:\Users\circleci\repo\allure-2.29.0\allure-2.29.0\bin"
             [System.Environment]::SetEnvironmentVariable("Path", $newPath, "Machine")
             echo $env:path
             $existingPath = [System.Environment]::GetEnvironmentVariable("Path", "User")
-            $newPath = $existingPath + ";C:\Users\raind\Downloads\allure-2.29.0\allure2-2.29.0\bin"
+            $newPath = $existingPath + ";C:\Users\raind\Downloads\allure-2.29.0\allure-2.29.0\bin"
             [System.Environment]::SetEnvironmentVariable("Path", $newPath, "User")
             echo $env:path
       - run:
