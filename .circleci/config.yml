@@ -20,14 +20,13 @@ jobs:
           name: Unpack allure
           command: |
             Expand-Archive "allure-2.29.0.zip"
-            ls
             Get-Location
-            cd allure-2.29.0
-            ls
       - run:
           name: Add allure to sys path
           command: |
-            $env:Path += ";C:\Users\circleci\repo\allure-2.29.0\bin"
+            $existingPath = [System.Environment]::GetEnvironmentVariable("Path", "Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path", "User")
+            $newPath = $existingPath + ";C:\Users\circleci\repo\\allure-2.29.0\\allure-2.29.0\bin"
+            [System.Environment]::SetEnvironmentVariable("Path", $newPath, "Machine")
       - run:
           name: Run Selenium Server
           command: |
