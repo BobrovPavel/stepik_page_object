@@ -15,7 +15,7 @@ jobs:
       - run:
           name: Download allure
           command: |
-            Invoke-WebRequest -Uri "https://github.com/allure-framework/allure2/archive/refs/tags/2.29.0.zip" -OutFile "allure-2.29.0.zip"
+            Invoke-WebRequest -Uri "https://github.com/allure-framework/allure2/releases/download/2.29.0/allure-2.29.0.zip" -OutFile "allure-2.29.0.zip"
       - run:
           name: Unpack allure
           command: |
