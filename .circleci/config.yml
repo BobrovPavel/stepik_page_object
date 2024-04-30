@@ -12,21 +12,30 @@ jobs:
           name: Download Selenium Server
           command: | 
             Invoke-WebRequest -Uri "https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.19.0/selenium-server-4.19.1.jar" -OutFile "selenium-server-standalone.jar"
+#      - run:
+#          name: Download allure
+#          command: |
+#            Invoke-WebRequest -Uri "https://github.com/allure-framework/allure2/releases/download/2.29.0/allure-2.29.0.zip" -OutFile "allure-2.29.0.zip"
       - run:
-          name: Download allure
+          name: Install Scoop
           command: |
-            Invoke-WebRequest -Uri "https://github.com/allure-framework/allure2/releases/download/2.29.0/allure-2.29.0.zip" -OutFile "allure-2.29.0.zip"
+            Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+            Invoke-RestMethod -Uri https://get.scoop.sh | Invoke-Expression
       - run:
-          name: Unpack allure
+          name: Install allure
           command: |
-            Expand-Archive allure-2.29.0.zip -DestinationPath C:\Users\circleci\repo\allure-2.29.0
-            Get-Location
-      - run:
-          name: Add allure to sys path
-          command: |
-            $newPath = "$env:PATH;C:\Users\circleci\repo\allure-2.29.0\allure-2.29.0\bin"
-            [System.Environment]::SetEnvironmentVariable("PATH", $newPath, [System.EnvironmentVariableTarget]::Machine)
-            echo $env:path
+            scoop install allure
+#      - run:
+#          name: Unpack allure
+#          command: |
+#            Expand-Archive allure-2.29.0.zip -DestinationPath C:\Users\circleci\repo\allure-2.29.0
+#            Get-Location
+#      - run:
+#          name: Add allure to sys path
+#          command: |
+#            $newPath = "$env:PATH;C:\Users\circleci\repo\allure-2.29.0\allure-2.29.0\bin"
+#            [System.Environment]::SetEnvironmentVariable("PATH", $newPath, [System.EnvironmentVariableTarget]::Machine)
+#            echo $env:path
       - run:
           name: Run Selenium Server
           command: |
