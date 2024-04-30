@@ -15,16 +15,16 @@ def browser(request):
 
     if browser_name == 'chrome':
         options = Options()
-        desired_capabilities = {
-            "browserName": "chrome",
-            "browserVersion": "latest",
-            "video": "True",
-            "platform": "WIN10",
-            "platformName": "windows",
-        }
         options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
-        options.add_argument("browserName: chrome")
-        browser = webdriver.Remote(options=options, desired_capabilities=desired_capabilities)
+        # options.add_argument("--headless")
+        options.add_argument("--no-sandbox")
+        options.add_argument("disable-dev-shm-usage")
+        options.add_argument("--window-size=1920,1080")
+        browser = webdriver.Remote(command_executor="http://localhost:4444/wd/hub", options=options)
+        # options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
+        # options.set_capability("browserVersion", "124")
+        # options.set_capability("platformName", "Windows 11")
+
     elif browser_name == 'firefox':
         options = OptionsFirefox()
         options.set_preference("intl.accept_languages", user_language)
