@@ -15,12 +15,6 @@ def browser(request):
 
     if browser_name == 'chrome':
         options = Options()
-        options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
-        options.add_argument("--headless")
-        options.add_argument("--no-sandbox")
-        options.add_argument("disable-dev-shm-usage")
-        options.add_argument("--window-size=1920,1080")
-        options.add_argument("browserName: chrome")
         desired_capabilities = {
             "browserName": "chrome",
             "browserVersion": "latest",
@@ -29,8 +23,8 @@ def browser(request):
             "platformName": "windows",
         }
         options.add_experimental_option('prefs', {'intl.accept_languages': user_language})
+        options.add_argument("browserName: chrome")
         browser = webdriver.Remote(options=options, desired_capabilities=desired_capabilities)
-
     elif browser_name == 'firefox':
         options = OptionsFirefox()
         options.set_preference("intl.accept_languages", user_language)
