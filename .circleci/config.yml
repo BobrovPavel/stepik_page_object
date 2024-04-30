@@ -1,23 +1,7 @@
-version: 2.1
-jobs:
-  build:
-    resource_class: 'windows.medium'
-    machine:
-      image: 'windows-server-2022-gui:current'
-      shell: 'powershell.exe -ExecutionPolicy Bypass'
-    working_directory: ~/repo
-    steps:
-      - checkout
-      - run:
-          name: Download Selenium Server
-          command: | 
-            Invoke-WebRequest -Uri "https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.19.0/selenium-server-4.19.1.jar" -OutFile "selenium-server-standalone.jar"
-            ls
       - run:
           name: Run Selenium Server
           command: |
-            ls
-            java -jar selenium-server-standalone.jar standalone --selenium-manager true
+            java -jar C:\tools\selenium\selenium-server-standalone.jar
           background: true
       - run:
           name: check python
@@ -41,5 +25,3 @@ jobs:
             pytest -rP -m need_review
       - store_artifacts:
           path: tmp/screenshots/
-      - store_artifacts:
-          path: C:\ProgramData\chocolatey\logs\chocolatey.log
