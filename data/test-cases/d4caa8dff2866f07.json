@@ -1,0 +1,107 @@
+{
+  "uid" : "d4caa8dff2866f07",
+  "name" : "test_guest_can_go_to_login_page_from_product_page",
+  "fullName" : "test_product_page.TestLoginFromProductPage#test_guest_can_go_to_login_page_from_product_page",
+  "historyId" : "6f0cac2001dc3bff365c00709d709434",
+  "time" : {
+    "start" : 1714650121072,
+    "stop" : 1714650121533,
+    "duration" : 461
+  },
+  "status" : "passed",
+  "flaky" : false,
+  "newFailed" : false,
+  "beforeStages" : [ {
+    "name" : "setup",
+    "time" : {
+      "start" : 1714650120487,
+      "stop" : 1714650121071,
+      "duration" : 584
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  }, {
+    "name" : "browser",
+    "time" : {
+      "start" : 1714650120096,
+      "stop" : 1714650120487,
+      "duration" : 391
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "afterStages" : [ {
+    "name" : "browser::0",
+    "time" : {
+      "start" : 1714650121533,
+      "stop" : 1714650121620,
+      "duration" : 87
+    },
+    "status" : "passed",
+    "steps" : [ ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 0,
+    "shouldDisplayMessage" : false,
+    "stepsCount" : 0,
+    "hasContent" : false
+  } ],
+  "labels" : [ {
+    "name" : "feature",
+    "value" : "User can add product to the basket"
+  }, {
+    "name" : "tag",
+    "value" : "need_review"
+  }, {
+    "name" : "tag",
+    "value" : "login"
+  }, {
+    "name" : "suite",
+    "value" : "test_product_page"
+  }, {
+    "name" : "subSuite",
+    "value" : "TestLoginFromProductPage"
+  }, {
+    "name" : "host",
+    "value" : "d309f83d48a2"
+  }, {
+    "name" : "thread",
+    "value" : "1-MainThread"
+  }, {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "package",
+    "value" : "test_product_page"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure2"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ ],
+    "tags" : [ "need_review", "login" ]
+  },
+  "source" : "d4caa8dff2866f07.json",
+  "parameterValues" : [ ]
+}
