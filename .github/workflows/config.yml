@@ -1,0 +1,31 @@
+name: Stepik tests
+
+on: [ push ]
+
+jobs:
+  stepik-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run stepik UI tests via docker compose
+      - env:
+          EMAIL: ${{secrets.EMAIL}}
+          PASSWORD: ${{secrets.PASSWORD}}
+
+        run: |
+          docker-compose up --build --exit-code-from regression || true
+      - name: Generate allure report
+        run: |
+          sudo docker-compose run regression /bin/sh -c "allure generate allure-results --clean -o allure-report"
+
+      - name: Deploy report to Github Pages
+        if: always()
+        uses: bobrovpavel/github-pages-deploy-action@4.1.5
+        with:
+          token: ${{ secrets.CI_TOKEN }}
+          branch: gh-pages
+          folder: allure-report
+          clean: true
+
