@@ -49,6 +49,10 @@ jobs:
           command: |
             pip install -r requirements.txt
       - run:
+          name: Check the list of dependencies
+          command: |
+            pip list
+      - run:
           name: run tests
           command: |
             echo $env:path
