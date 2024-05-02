@@ -12,21 +12,21 @@ jobs:
           name: Download Selenium Server
           command: | 
             Invoke-WebRequest -Uri "https://github.com/SeleniumHQ/selenium/releases/download/selenium-4.19.0/selenium-server-4.19.1.jar" -OutFile "selenium-server-standalone.jar"
-      - run:
-          name: Download allure
-          command: |
-            Invoke-WebRequest -Uri "https://github.com/allure-framework/allure2/releases/download/2.29.0/allure-2.29.0.zip" -OutFile "allure-2.29.0.zip"
-      - run:
-          name: Unpack allure
-          command: |
-            Expand-Archive allure-2.29.0.zip -DestinationPath C:\Users\circleci\repo\allure-2.29.0
-            Get-Location
-      - run:
-          name: Add allure to sys path
-          command: |
-            $newPath = "$env:PATH;C:\Users\circleci\repo\allure-2.29.0\allure-2.29.0\bin"
-            [System.Environment]::SetEnvironmentVariable("PATH", $newPath, [System.EnvironmentVariableTarget]::Machine)
-            echo $env:path
+#      - run:
+#          name: Download allure
+#          command: |
+#            Invoke-WebRequest -Uri "https://github.com/allure-framework/allure2/releases/download/2.29.0/allure-2.29.0.zip" -OutFile "allure-2.29.0.zip"
+#      - run:
+#          name: Unpack allure
+#          command: |
+#            Expand-Archive allure-2.29.0.zip -DestinationPath C:\Users\circleci\repo\allure-2.29.0
+#            Get-Location
+#      - run:
+#          name: Add allure to sys path
+#          command: |
+#            $newPath = "$env:PATH;C:\Users\circleci\repo\allure-2.29.0\allure-2.29.0\bin"
+#            [System.Environment]::SetEnvironmentVariable("PATH", $newPath, [System.EnvironmentVariableTarget]::Machine)
+#            echo $env:path
       - run:
           name: Run Selenium Server
           command: |
@@ -52,7 +52,7 @@ jobs:
           name: run tests
           command: |
             echo $env:path
-            pytest -rP -m need_review
+            pytest -vv --showlocals --tb=long -m need_review
       - store_artifacts:
           path: tmp/screenshots/
       - store_artifacts:
