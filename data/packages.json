@@ -4,52 +4,52 @@
     "name" : "test_product_page",
     "children" : [ {
       "name" : "test_guest_can_go_to_login_page_from_product_page",
-      "uid" : "d4caa8dff2866f07",
+      "uid" : "5e4ceb8ac51a651d",
       "parentUid" : "bed6937643fb20c64f8657aad9485f4c",
       "status" : "passed",
       "time" : {
-        "start" : 1714650121072,
-        "stop" : 1714650121533,
-        "duration" : 461
+        "start" : 1714650538163,
+        "stop" : 1714650538572,
+        "duration" : 409
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "test_guest_cant_see_product_in_basket_opened_from_product_page",
-      "uid" : "b1b1eaf5e81ad795",
+      "uid" : "68d0142a7af4c7b8",
       "parentUid" : "bed6937643fb20c64f8657aad9485f4c",
       "status" : "passed",
       "time" : {
-        "start" : 1714650122671,
-        "stop" : 1714650128869,
-        "duration" : 6198
+        "start" : 1714650539980,
+        "stop" : 1714650546301,
+        "duration" : 6321
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "test_guest_can_add_product_to_basket",
-      "uid" : "d2b1979171cee5d9",
+      "uid" : "8b23016844305f47",
       "parentUid" : "bed6937643fb20c64f8657aad9485f4c",
       "status" : "passed",
       "time" : {
-        "start" : 1714650129255,
-        "stop" : 1714650130347,
-        "duration" : 1092
+        "start" : 1714650546687,
+        "stop" : 1714650548389,
+        "duration" : 1702
       },
       "flaky" : false,
       "newFailed" : false,
       "parameters" : [ ]
     }, {
       "name" : "Registered user adds item to the basket",
-      "uid" : "fde3b09561dd0e9f",
+      "uid" : "7e8a42889e208ecd",
       "parentUid" : "bed6937643fb20c64f8657aad9485f4c",
       "status" : "passed",
       "time" : {
-        "start" : 1714650132405,
-        "stop" : 1714650133953,
-        "duration" : 1548
+        "start" : 1714650550906,
+        "stop" : 1714650552778,
+        "duration" : 1872
       },
       "flaky" : false,
       "newFailed" : false,

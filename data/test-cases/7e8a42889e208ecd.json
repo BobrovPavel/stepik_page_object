@@ -1,12 +1,12 @@
 {
-  "uid" : "fde3b09561dd0e9f",
+  "uid" : "7e8a42889e208ecd",
   "name" : "Registered user adds item to the basket",
   "fullName" : "test_product_page.TestUserAddToBasketFromProductPage#test_user_can_add_product_to_basket",
   "historyId" : "98e7380dbfc189a872bc552f301ce74c",
   "time" : {
-    "start" : 1714650132405,
-    "stop" : 1714650133953,
-    "duration" : 1548
+    "start" : 1714650550906,
+    "stop" : 1714650552778,
+    "duration" : 1872
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,32 +14,32 @@
   "beforeStages" : [ {
     "name" : "setup",
     "time" : {
-      "start" : 1714650130729,
-      "stop" : 1714650132405,
-      "duration" : 1676
+      "start" : 1714650548780,
+      "stop" : 1714650550906,
+      "duration" : 2126
     },
     "status" : "passed",
     "steps" : [ {
-      "name" : "Register a new user with email: '1714650130.7287292@fakemail.org'",
+      "name" : "Register a new user with email: '1714650548.7795703@fakemail.org'",
       "time" : {
-        "start" : 1714650131281,
-        "stop" : 1714650132397,
-        "duration" : 1116
+        "start" : 1714650549571,
+        "stop" : 1714650550898,
+        "duration" : 1327
       },
       "status" : "passed",
       "steps" : [ {
         "name" : "Enter email",
         "time" : {
-          "start" : 1714650131281,
-          "stop" : 1714650131340,
-          "duration" : 59
+          "start" : 1714650549571,
+          "stop" : 1714650549628,
+          "duration" : 57
         },
         "status" : "passed",
         "steps" : [ ],
         "attachments" : [ ],
         "parameters" : [ {
           "name" : "email",
-          "value" : "'1714650130.7287292@fakemail.org'"
+          "value" : "'1714650548.7795703@fakemail.org'"
         } ],
         "attachmentsCount" : 0,
         "shouldDisplayMessage" : false,
@@ -48,9 +48,9 @@
       }, {
         "name" : "Enter password",
         "time" : {
-          "start" : 1714650131340,
-          "stop" : 1714650131386,
-          "duration" : 46
+          "start" : 1714650549629,
+          "stop" : 1714650549677,
+          "duration" : 48
         },
         "status" : "passed",
         "steps" : [ ],
@@ -66,8 +66,8 @@
       }, {
         "name" : "Confirm password",
         "time" : {
-          "start" : 1714650131386,
-          "stop" : 1714650131433,
+          "start" : 1714650549677,
+          "stop" : 1714650549724,
           "duration" : 47
         },
         "status" : "passed",
@@ -84,9 +84,9 @@
       }, {
         "name" : "Click submit button",
         "time" : {
-          "start" : 1714650131433,
-          "stop" : 1714650132397,
-          "duration" : 964
+          "start" : 1714650549725,
+          "stop" : 1714650550898,
+          "duration" : 1173
         },
         "status" : "passed",
         "steps" : [ ],
@@ -113,9 +113,9 @@
   }, {
     "name" : "browser",
     "time" : {
-      "start" : 1714650130404,
-      "stop" : 1714650130729,
-      "duration" : 325
+      "start" : 1714650548446,
+      "stop" : 1714650548779,
+      "duration" : 333
     },
     "status" : "passed",
     "steps" : [ ],
@@ -131,9 +131,9 @@
     "steps" : [ {
       "name" : "Open 'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/' page",
       "time" : {
-        "start" : 1714650132406,
-        "stop" : 1714650132963,
-        "duration" : 557
+        "start" : 1714650550907,
+        "stop" : 1714650551710,
+        "duration" : 803
       },
       "status" : "passed",
       "steps" : [ ],
@@ -145,9 +145,9 @@
       "hasContent" : false
     } ],
     "attachments" : [ {
-      "uid" : "7ced3b1d623d3de7",
+      "uid" : "a9913806d180274f",
       "name" : "Success",
-      "source" : "7ced3b1d623d3de7.png",
+      "source" : "a9913806d180274f.png",
       "type" : "image/png",
       "size" : 192220
     } ],
@@ -160,8 +160,8 @@
   "afterStages" : [ {
     "name" : "browser::0",
     "time" : {
-      "start" : 1714650133954,
-      "stop" : 1714650134009,
+      "start" : 1714650552779,
+      "stop" : 1714650552834,
       "duration" : 55
     },
     "status" : "passed",
@@ -174,11 +174,11 @@
     "hasContent" : false
   } ],
   "labels" : [ {
-    "name" : "severity",
-    "value" : "Critical"
-  }, {
     "name" : "feature",
     "value" : "User can add product to the basket"
+  }, {
+    "name" : "severity",
+    "value" : "Critical"
   }, {
     "name" : "tag",
     "value" : "need_review"
@@ -190,7 +190,7 @@
     "value" : "TestUserAddToBasketFromProductPage"
   }, {
     "name" : "host",
-    "value" : "d309f83d48a2"
+    "value" : "2ee065d89137"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -215,8 +215,27 @@
     "severity" : "critical",
     "retries" : [ ],
     "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "fde3b09561dd0e9f",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714650132405,
+          "stop" : 1714650133953,
+          "duration" : 1548
+        }
+      } ]
+    },
     "tags" : [ "need_review" ]
   },
-  "source" : "fde3b09561dd0e9f.json",
+  "source" : "7e8a42889e208ecd.json",
   "parameterValues" : [ ]
 }

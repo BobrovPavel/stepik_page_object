@@ -1,22 +1,22 @@
 {
-  "uid" : "b1b1eaf5e81ad795",
-  "name" : "test_guest_cant_see_product_in_basket_opened_from_product_page",
-  "fullName" : "test_product_page.TestLoginFromProductPage#test_guest_cant_see_product_in_basket_opened_from_product_page",
-  "historyId" : "f736e4da79104d16b512e8707930dbca",
+  "uid" : "5e4ceb8ac51a651d",
+  "name" : "test_guest_can_go_to_login_page_from_product_page",
+  "fullName" : "test_product_page.TestLoginFromProductPage#test_guest_can_go_to_login_page_from_product_page",
+  "historyId" : "6f0cac2001dc3bff365c00709d709434",
   "time" : {
-    "start" : 1714650122671,
-    "stop" : 1714650128869,
-    "duration" : 6198
+    "start" : 1714650538163,
+    "stop" : 1714650538572,
+    "duration" : 409
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "setup",
+    "name" : "browser",
     "time" : {
-      "start" : 1714650121949,
-      "stop" : 1714650122671,
-      "duration" : 722
+      "start" : 1714650536679,
+      "stop" : 1714650537063,
+      "duration" : 384
     },
     "status" : "passed",
     "steps" : [ ],
@@ -27,11 +27,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "browser",
+    "name" : "setup",
     "time" : {
-      "start" : 1714650121621,
-      "stop" : 1714650121949,
-      "duration" : 328
+      "start" : 1714650537063,
+      "stop" : 1714650538163,
+      "duration" : 1100
     },
     "status" : "passed",
     "steps" : [ ],
@@ -45,9 +45,9 @@
   "afterStages" : [ {
     "name" : "browser::0",
     "time" : {
-      "start" : 1714650128870,
-      "stop" : 1714650128925,
-      "duration" : 55
+      "start" : 1714650538573,
+      "stop" : 1714650538658,
+      "duration" : 85
     },
     "status" : "passed",
     "steps" : [ ],
@@ -75,7 +75,7 @@
     "value" : "TestLoginFromProductPage"
   }, {
     "name" : "host",
-    "value" : "d309f83d48a2"
+    "value" : "2ee065d89137"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -100,8 +100,27 @@
     "severity" : "normal",
     "retries" : [ ],
     "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "d4caa8dff2866f07",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714650121072,
+          "stop" : 1714650121533,
+          "duration" : 461
+        }
+      } ]
+    },
     "tags" : [ "need_review", "login" ]
   },
-  "source" : "b1b1eaf5e81ad795.json",
+  "source" : "5e4ceb8ac51a651d.json",
   "parameterValues" : [ ]
 }

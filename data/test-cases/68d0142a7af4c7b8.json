@@ -1,12 +1,12 @@
 {
-  "uid" : "d4caa8dff2866f07",
-  "name" : "test_guest_can_go_to_login_page_from_product_page",
-  "fullName" : "test_product_page.TestLoginFromProductPage#test_guest_can_go_to_login_page_from_product_page",
-  "historyId" : "6f0cac2001dc3bff365c00709d709434",
+  "uid" : "68d0142a7af4c7b8",
+  "name" : "test_guest_cant_see_product_in_basket_opened_from_product_page",
+  "fullName" : "test_product_page.TestLoginFromProductPage#test_guest_cant_see_product_in_basket_opened_from_product_page",
+  "historyId" : "f736e4da79104d16b512e8707930dbca",
   "time" : {
-    "start" : 1714650121072,
-    "stop" : 1714650121533,
-    "duration" : 461
+    "start" : 1714650539980,
+    "stop" : 1714650546301,
+    "duration" : 6321
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,9 +14,9 @@
   "beforeStages" : [ {
     "name" : "setup",
     "time" : {
-      "start" : 1714650120487,
-      "stop" : 1714650121071,
-      "duration" : 584
+      "start" : 1714650538987,
+      "stop" : 1714650539980,
+      "duration" : 993
     },
     "status" : "passed",
     "steps" : [ ],
@@ -29,9 +29,9 @@
   }, {
     "name" : "browser",
     "time" : {
-      "start" : 1714650120096,
-      "stop" : 1714650120487,
-      "duration" : 391
+      "start" : 1714650538660,
+      "stop" : 1714650538986,
+      "duration" : 326
     },
     "status" : "passed",
     "steps" : [ ],
@@ -45,9 +45,9 @@
   "afterStages" : [ {
     "name" : "browser::0",
     "time" : {
-      "start" : 1714650121533,
-      "stop" : 1714650121620,
-      "duration" : 87
+      "start" : 1714650546302,
+      "stop" : 1714650546357,
+      "duration" : 55
     },
     "status" : "passed",
     "steps" : [ ],
@@ -75,7 +75,7 @@
     "value" : "TestLoginFromProductPage"
   }, {
     "name" : "host",
-    "value" : "d309f83d48a2"
+    "value" : "2ee065d89137"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -100,8 +100,27 @@
     "severity" : "normal",
     "retries" : [ ],
     "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "b1b1eaf5e81ad795",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714650122671,
+          "stop" : 1714650128869,
+          "duration" : 6198
+        }
+      } ]
+    },
     "tags" : [ "need_review", "login" ]
   },
-  "source" : "d4caa8dff2866f07.json",
+  "source" : "68d0142a7af4c7b8.json",
   "parameterValues" : [ ]
 }

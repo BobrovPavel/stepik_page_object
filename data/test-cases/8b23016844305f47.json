@@ -1,12 +1,12 @@
 {
-  "uid" : "d2b1979171cee5d9",
+  "uid" : "8b23016844305f47",
   "name" : "test_guest_can_add_product_to_basket",
   "fullName" : "test_product_page.TestGuesAddToBasketFromProductPage#test_guest_can_add_product_to_basket",
   "historyId" : "ae29332c9ebe9b791fd2a56ddfe90d31",
   "time" : {
-    "start" : 1714650129255,
-    "stop" : 1714650130347,
-    "duration" : 1092
+    "start" : 1714650546687,
+    "stop" : 1714650548389,
+    "duration" : 1702
   },
   "status" : "passed",
   "flaky" : false,
@@ -14,9 +14,9 @@
   "beforeStages" : [ {
     "name" : "browser",
     "time" : {
-      "start" : 1714650128927,
-      "stop" : 1714650129254,
-      "duration" : 327
+      "start" : 1714650546358,
+      "stop" : 1714650546687,
+      "duration" : 329
     },
     "status" : "passed",
     "steps" : [ ],
@@ -32,9 +32,9 @@
     "steps" : [ {
       "name" : "Open 'http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/' page",
       "time" : {
-        "start" : 1714650129256,
-        "stop" : 1714650129757,
-        "duration" : 501
+        "start" : 1714650546688,
+        "stop" : 1714650547659,
+        "duration" : 971
       },
       "status" : "passed",
       "steps" : [ ],
@@ -55,8 +55,8 @@
   "afterStages" : [ {
     "name" : "browser::0",
     "time" : {
-      "start" : 1714650130347,
-      "stop" : 1714650130402,
+      "start" : 1714650548390,
+      "stop" : 1714650548445,
       "duration" : 55
     },
     "status" : "passed",
@@ -82,7 +82,7 @@
     "value" : "TestGuesAddToBasketFromProductPage"
   }, {
     "name" : "host",
-    "value" : "d309f83d48a2"
+    "value" : "2ee065d89137"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -107,8 +107,27 @@
     "severity" : "normal",
     "retries" : [ ],
     "categories" : [ ],
+    "history" : {
+      "statistic" : {
+        "failed" : 0,
+        "broken" : 0,
+        "skipped" : 0,
+        "passed" : 2,
+        "unknown" : 0,
+        "total" : 2
+      },
+      "items" : [ {
+        "uid" : "d2b1979171cee5d9",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714650129255,
+          "stop" : 1714650130347,
+          "duration" : 1092
+        }
+      } ]
+    },
     "tags" : [ "need_review" ]
   },
-  "source" : "d2b1979171cee5d9.json",
+  "source" : "8b23016844305f47.json",
   "parameterValues" : [ ]
 }
