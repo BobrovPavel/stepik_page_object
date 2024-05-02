@@ -2,80 +2,76 @@
   "ae29332c9ebe9b791fd2a56ddfe90d31" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 1,
+      "broken" : 0,
       "skipped" : 0,
-      "passed" : 0,
+      "passed" : 1,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "4b1022755f864b3a",
-      "status" : "broken",
-      "statusDetails" : "urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4444): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbb2a859220>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+      "uid" : "c03c5099e8bda3b8",
+      "status" : "passed",
       "time" : {
-        "start" : 1714648982153,
-        "stop" : 1714648982153,
-        "duration" : 0
+        "start" : 1714649090315,
+        "stop" : 1714649091767,
+        "duration" : 1452
       }
     } ]
   },
   "6f0cac2001dc3bff365c00709d709434" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 1,
+      "broken" : 0,
       "skipped" : 0,
-      "passed" : 0,
+      "passed" : 1,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "29bd0735799f5d13",
-      "status" : "broken",
-      "statusDetails" : "urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4444): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbb2b0e6ab0>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+      "uid" : "2b48c642c24b2b90",
+      "status" : "passed",
       "time" : {
-        "start" : 1714648981898,
-        "stop" : 1714648981898,
-        "duration" : 0
+        "start" : 1714649081891,
+        "stop" : 1714649082407,
+        "duration" : 516
       }
     } ]
   },
   "f736e4da79104d16b512e8707930dbca" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 1,
+      "broken" : 0,
       "skipped" : 0,
-      "passed" : 0,
+      "passed" : 1,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "2ca0da2bc0c4a836",
-      "status" : "broken",
-      "statusDetails" : "urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4444): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbb2a704950>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+      "uid" : "d87aef68eb7f602",
+      "status" : "passed",
       "time" : {
-        "start" : 1714648982040,
-        "stop" : 1714648982040,
-        "duration" : 0
+        "start" : 1714649083689,
+        "stop" : 1714649089927,
+        "duration" : 6238
       }
     } ]
   },
   "98e7380dbfc189a872bc552f301ce74c" : {
     "statistic" : {
       "failed" : 0,
-      "broken" : 1,
+      "broken" : 0,
       "skipped" : 0,
-      "passed" : 0,
+      "passed" : 1,
       "unknown" : 0,
       "total" : 1
     },
     "items" : [ {
-      "uid" : "c024349d855fe8ad",
-      "status" : "broken",
-      "statusDetails" : "urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=4444): Max retries exceeded with url: /session (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7fbb2a8e4f80>: Failed to establish a new connection: [Errno 111] Connection refused'))",
+      "uid" : "879dfc8989346a91",
+      "status" : "passed",
       "time" : {
-        "start" : 1714648982264,
-        "stop" : 1714648982264,
-        "duration" : 0
+        "start" : 1714649094376,
+        "stop" : 1714649096223,
+        "duration" : 1847
       }
     } ]
   }

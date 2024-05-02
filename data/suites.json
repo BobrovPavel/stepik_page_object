@@ -6,26 +6,26 @@
       "name" : "TestLoginFromProductPage",
       "children" : [ {
         "name" : "test_guest_can_go_to_login_page_from_product_page",
-        "uid" : "29bd0735799f5d13",
+        "uid" : "2b48c642c24b2b90",
         "parentUid" : "1fe36e9da559781ab37fc1a50dcb1d59",
-        "status" : "broken",
+        "status" : "passed",
         "time" : {
-          "start" : 1714648981898,
-          "stop" : 1714648981898,
-          "duration" : 0
+          "start" : 1714649081891,
+          "stop" : 1714649082407,
+          "duration" : 516
         },
         "flaky" : false,
         "newFailed" : false,
         "parameters" : [ ]
       }, {
         "name" : "test_guest_cant_see_product_in_basket_opened_from_product_page",
-        "uid" : "2ca0da2bc0c4a836",
+        "uid" : "d87aef68eb7f602",
         "parentUid" : "1fe36e9da559781ab37fc1a50dcb1d59",
-        "status" : "broken",
+        "status" : "passed",
         "time" : {
-          "start" : 1714648982040,
-          "stop" : 1714648982040,
-          "duration" : 0
+          "start" : 1714649083689,
+          "stop" : 1714649089927,
+          "duration" : 6238
         },
         "flaky" : false,
         "newFailed" : false,
@@ -36,13 +36,13 @@
       "name" : "TestGuesAddToBasketFromProductPage",
       "children" : [ {
         "name" : "test_guest_can_add_product_to_basket",
-        "uid" : "4b1022755f864b3a",
+        "uid" : "c03c5099e8bda3b8",
         "parentUid" : "f11fb1b3baae0071effd8f84db3918ef",
-        "status" : "broken",
+        "status" : "passed",
         "time" : {
-          "start" : 1714648982153,
-          "stop" : 1714648982153,
-          "duration" : 0
+          "start" : 1714649090315,
+          "stop" : 1714649091767,
+          "duration" : 1452
         },
         "flaky" : false,
         "newFailed" : false,
@@ -53,13 +53,13 @@
       "name" : "TestUserAddToBasketFromProductPage",
       "children" : [ {
         "name" : "Registered user adds item to the basket",
-        "uid" : "c024349d855fe8ad",
+        "uid" : "879dfc8989346a91",
         "parentUid" : "05777e6ad26eb32b637602f0fa6be645",
-        "status" : "broken",
+        "status" : "passed",
         "time" : {
-          "start" : 1714648982264,
-          "stop" : 1714648982264,
-          "duration" : 0
+          "start" : 1714649094376,
+          "stop" : 1714649096223,
+          "duration" : 1847
         },
         "flaky" : false,
         "newFailed" : false,
