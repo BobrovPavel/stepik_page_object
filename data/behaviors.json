@@ -1,0 +1,61 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "children" : [ {
+    "name" : "test_guest_can_go_to_login_page_from_product_page",
+    "uid" : "29bd0735799f5d13",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1714648981898,
+      "stop" : 1714648981898,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "test_guest_cant_see_product_in_basket_opened_from_product_page",
+    "uid" : "2ca0da2bc0c4a836",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1714648982040,
+      "stop" : 1714648982040,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "test_guest_can_add_product_to_basket",
+    "uid" : "4b1022755f864b3a",
+    "parentUid" : "b1a8273437954620fa374b796ffaacdd",
+    "status" : "broken",
+    "time" : {
+      "start" : 1714648982153,
+      "stop" : 1714648982153,
+      "duration" : 0
+    },
+    "flaky" : false,
+    "newFailed" : false,
+    "parameters" : [ ]
+  }, {
+    "name" : "User can add product to the basket",
+    "children" : [ {
+      "name" : "Registered user adds item to the basket",
+      "uid" : "c024349d855fe8ad",
+      "parentUid" : "548b522aa26ce452375dd1b5d14db77c",
+      "status" : "broken",
+      "time" : {
+        "start" : 1714648982264,
+        "stop" : 1714648982264,
+        "duration" : 0
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "548b522aa26ce452375dd1b5d14db77c"
+  } ],
+  "name" : "behaviors"
+}

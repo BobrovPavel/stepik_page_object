@@ -1,0 +1,73 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "children" : [ {
+    "name" : "test_product_page",
+    "children" : [ {
+      "name" : "TestLoginFromProductPage",
+      "children" : [ {
+        "name" : "test_guest_can_go_to_login_page_from_product_page",
+        "uid" : "29bd0735799f5d13",
+        "parentUid" : "1fe36e9da559781ab37fc1a50dcb1d59",
+        "status" : "broken",
+        "time" : {
+          "start" : 1714648981898,
+          "stop" : 1714648981898,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      }, {
+        "name" : "test_guest_cant_see_product_in_basket_opened_from_product_page",
+        "uid" : "2ca0da2bc0c4a836",
+        "parentUid" : "1fe36e9da559781ab37fc1a50dcb1d59",
+        "status" : "broken",
+        "time" : {
+          "start" : 1714648982040,
+          "stop" : 1714648982040,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "1fe36e9da559781ab37fc1a50dcb1d59"
+    }, {
+      "name" : "TestGuesAddToBasketFromProductPage",
+      "children" : [ {
+        "name" : "test_guest_can_add_product_to_basket",
+        "uid" : "4b1022755f864b3a",
+        "parentUid" : "f11fb1b3baae0071effd8f84db3918ef",
+        "status" : "broken",
+        "time" : {
+          "start" : 1714648982153,
+          "stop" : 1714648982153,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "f11fb1b3baae0071effd8f84db3918ef"
+    }, {
+      "name" : "TestUserAddToBasketFromProductPage",
+      "children" : [ {
+        "name" : "Registered user adds item to the basket",
+        "uid" : "c024349d855fe8ad",
+        "parentUid" : "05777e6ad26eb32b637602f0fa6be645",
+        "status" : "broken",
+        "time" : {
+          "start" : 1714648982264,
+          "stop" : 1714648982264,
+          "duration" : 0
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "05777e6ad26eb32b637602f0fa6be645"
+    } ],
+    "uid" : "2ac69296d25a79e4a24517462ae8926f"
+  } ],
+  "name" : "suites"
+}

@@ -1,0 +1,15 @@
+{
+  "total" : 4,
+  "items" : [ {
+    "uid" : "548b522aa26ce452375dd1b5d14db77c",
+    "name" : "User can add product to the basket",
+    "statistic" : {
+      "failed" : 0,
+      "broken" : 1,
+      "skipped" : 0,
+      "passed" : 0,
+      "unknown" : 0,
+      "total" : 1
+    }
+  } ]
+}
