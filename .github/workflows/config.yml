@@ -22,7 +22,7 @@ jobs:
 
       - name: Deploy report to Github Pages
         if: always()
-        uses: bobrovpavel/github-pages-deploy-action@4.1.5
+        uses: JamesIves/github-pages-deploy-action@4.1.5
         with:
           token: ${{ secrets.CI_TOKEN }}
           branch: gh-pages
