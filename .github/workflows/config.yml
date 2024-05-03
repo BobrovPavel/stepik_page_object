@@ -9,13 +9,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-      - name: Checkout gh-pages to github runner
-        uses: actions/checkout@v2
-        with:
-          ref: gh-pages
-          path: ./.github/gh-pages
+#      - name: Checkout gh-pages to github runner
+#        uses: actions/checkout@v2
+#        with:
+#          ref: gh-pages
+#          path: ./.github/gh-pages
 
       - name: Run stepik UI tests via docker compose
         env:
@@ -41,8 +41,8 @@ jobs:
           allure_results: build/allure-results
 
       - name: Publish test report
-        uses: peaceiris/actions-gh-pages@v3
         if: always()
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.CI_TOKEN }}
           publish_branch: gh-pages
