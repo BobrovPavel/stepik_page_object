@@ -2,12 +2,12 @@ version: "3.7"
 
 services:
   regression:
-    image: python:3.12.0a4-alpine3.17
     build:
       context: .
       dockerfile: Dockerfile
     volumes:
       - ./:/usr/workspace
+      - ./allure-report:/usr/workspace/allure-report   # 👈 проброс отчёта
     command: pytest -sv -m need_review --alluredir=allure-results
     working_dir: /usr/workspace
     environment:
