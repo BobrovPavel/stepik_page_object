@@ -1,22 +1,22 @@
 {
-  "uid" : "5e4ceb8ac51a651d",
-  "name" : "test_guest_can_go_to_login_page_from_product_page",
-  "fullName" : "test_product_page.TestLoginFromProductPage#test_guest_can_go_to_login_page_from_product_page",
-  "historyId" : "6f0cac2001dc3bff365c00709d709434",
+  "uid" : "a5b16d44d5712dd8",
+  "name" : "test_guest_cant_see_product_in_basket_opened_from_product_page",
+  "fullName" : "test_product_page.TestLoginFromProductPage#test_guest_cant_see_product_in_basket_opened_from_product_page",
+  "historyId" : "f736e4da79104d16b512e8707930dbca",
   "time" : {
-    "start" : 1714650538163,
-    "stop" : 1714650538572,
-    "duration" : 409
+    "start" : 1756295534450,
+    "stop" : 1756295540806,
+    "duration" : 6356
   },
   "status" : "passed",
   "flaky" : false,
   "newFailed" : false,
   "beforeStages" : [ {
-    "name" : "browser",
+    "name" : "setup",
     "time" : {
-      "start" : 1714650536679,
-      "stop" : 1714650537063,
-      "duration" : 384
+      "start" : 1756295533567,
+      "stop" : 1756295534450,
+      "duration" : 883
     },
     "status" : "passed",
     "steps" : [ ],
@@ -27,11 +27,11 @@
     "stepsCount" : 0,
     "hasContent" : false
   }, {
-    "name" : "setup",
+    "name" : "browser",
     "time" : {
-      "start" : 1714650537063,
-      "stop" : 1714650538163,
-      "duration" : 1100
+      "start" : 1756295533261,
+      "stop" : 1756295533567,
+      "duration" : 306
     },
     "status" : "passed",
     "steps" : [ ],
@@ -45,9 +45,9 @@
   "afterStages" : [ {
     "name" : "browser::0",
     "time" : {
-      "start" : 1714650538573,
-      "stop" : 1714650538658,
-      "duration" : 85
+      "start" : 1756295540807,
+      "stop" : 1756295540862,
+      "duration" : 55
     },
     "status" : "passed",
     "steps" : [ ],
@@ -75,7 +75,7 @@
     "value" : "TestLoginFromProductPage"
   }, {
     "name" : "host",
-    "value" : "2ee065d89137"
+    "value" : "e5489be5c477"
   }, {
     "name" : "thread",
     "value" : "1-MainThread"
@@ -105,22 +105,30 @@
         "failed" : 0,
         "broken" : 0,
         "skipped" : 0,
-        "passed" : 2,
+        "passed" : 3,
         "unknown" : 0,
-        "total" : 2
+        "total" : 3
       },
       "items" : [ {
-        "uid" : "d4caa8dff2866f07",
+        "uid" : "68d0142a7af4c7b8",
         "status" : "passed",
         "time" : {
-          "start" : 1714650121072,
-          "stop" : 1714650121533,
-          "duration" : 461
+          "start" : 1714650539980,
+          "stop" : 1714650546301,
+          "duration" : 6321
+        }
+      }, {
+        "uid" : "b1b1eaf5e81ad795",
+        "status" : "passed",
+        "time" : {
+          "start" : 1714650122671,
+          "stop" : 1714650128869,
+          "duration" : 6198
         }
       } ]
     },
     "tags" : [ "need_review", "login" ]
   },
-  "source" : "5e4ceb8ac51a651d.json",
+  "source" : "a5b16d44d5712dd8.json",
   "parameterValues" : [ ]
 }
